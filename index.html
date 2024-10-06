@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="output.css">
+<html lang="en">
+  <script src="./script.js" defer ></script>
+  <style>
+    #sheetData th, #sheetData td {
+      width: 200px; /* Set a fixed width for all columns */
+      overflow: hidden; /* Hide any overflow text */
+      text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-updating Google Sheets Data</title>
+
+</head>
+<div class="border rounded-2xl border-black  p-3 bg-gradient-to-r from-[#12a5aa] via-[#1c6f7d] to-[#12a5aa] w-max-[600px] h-max-[800px]">
+  
+  <h1 class=" text-2xl font-semibold text-[30px] text-white flex justify-between"><div>Bonus Opening</div>
+    <div id="totleft"></div>
+  </h1>
+  <div class="flex justify-between pb-3  font-bold text-[30px]">
+    <div>
+      
+      <div>
+        Start Balance
+      </div>
+      <div id='startBal' class="text-center text-white bg-black rounded-md">
+        
+      </div>
+    </div>
+
+    <div>
+      <div>
+        Profit/Loss
+      </div>
+      <div id='pl' class="text-center text-white bg-black rounded-md">
+        
+      </div>
+    </div>
+
+    <div>
+      <div>
+        B/E X
+      </div>
+  
+      <div id='bex' class="text-center text-white bg-black rounded-md"></div>
+      
+    </div>
+
+    <div>
+      <div>
+        Avg X
+      </div>
+      <div id="avgx" class="text-center text-white bg-black rounded-md">
+        
+      </div>
+    </div>
+
+  </div>
+   
+<div id="scrollableDiv" class="max-h-[360px] overflow-hidden ">
+  <table id="sheetData"  class="border-collapse w-full ">
+    <thead >
+      <tr class="bg-black text-white text-left text-[25px] sticky top-0 ">
+        <th class="rounded-l-md pl-[10px] ">Slot</th>
+        <th>Bet $</th>
+        <th class="rounded-r-md pr-[10px] text-right">Payout</th>
+      </tr>
+    </thead>
+    <tbody class="text-white font-normal text-[25px]  "></tbody>
+  </table>
+
+  
+
+
+</div>
+  
+
+  <div class="flex justify-between  gap-6 text-[25px]">
+    <div class="font-bold text-[25px] ">
+      Payout
+    </div>
+    <div><img class="max-w-[22px] pt-[8px]" src="./trophy.png" alt=""></div>
+    <div id="slotpay" class="text-center text-white bg-black rounded-md w-full">
+    </div>
+    <div id="highestPay" class="text-center text-white bg-black rounded-md px-2">
+        </div>
+  </div>
+
+  <div class="flex justify-between pt-[5px] gap-6  text-[25px]">
+    <div class="pr-[17px] font-bold text-[25px]">
+      Multi  
+    </div>
+    <div><img class="max-w-[22px] pt-[8px]" src="./trophy.png" alt=""></div>
+    <div id='slotx' class="text-center text-white bg-black rounded-md w-full">
+      
+    </div>
+    <div id='highestX' class="text-center text-white bg-black rounded-md px-2">
+      
+    </div>
+  </div>
+
+
+ 
+</div>
+</html>
